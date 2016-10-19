@@ -1,0 +1,1024 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+}
+button {
+  width: 100%;
+  height: 4.167rem;
+  line-height: 4.167rem;
+  background: rgba(86, 78, 142, 0.8);
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 0.417rem;
+}
+.formGroup p {
+  width: 70%;
+  height: 2.5rem;
+  padding: 0;
+  display: -webkit-box;
+  margin: 0.5rem auto;
+}
+.formGroup p input[type='text'] {
+  margin: 0;
+  width: 0;
+  -webkit-box-flex: 1.2;
+  margin: 0 1rem;
+  text-align: center;
+}
+.formGroup p label {
+  -webkit-box-flex: 1;
+  line-height: 2.5rem;
+  color: #fff;
+  margin-right: 1rem;
+}
+.formGroup p span {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  -webkit-box-flex: 1;
+  background: rgba(112, 112, 112, 0.5);
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2.5rem;
+}
+.formGroup input[type='text'],
+.formGroup input[type='tel'],
+.formGroup select,
+.formGroup input[type='datetime-local'] {
+  width: 70%;
+  height: 2.5rem;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  border: 0;
+  display: block;
+  margin: 0.5rem auto;
+  background: rgba(112, 112, 112, 0.5);
+  color: #fff;
+}
+.formGroup textarea {
+  width: 70%;
+  height: 8rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 0;
+  display: block;
+  margin: 0.5rem auto;
+  background: rgba(112, 112, 112, 0.5);
+  color: #fff;
+}
+#wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+#wrap #headerNav {
+  height: 4.583rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  -webkit-box-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+#wrap #headerNav #nav-select {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  margin-left: 0.833rem;
+  margin-right: 0.833rem;
+}
+#wrap #headerNav #nav-select span {
+  float: left;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  margin-top: 2.6px;
+  display: block;
+  border-radius: 3px;
+}
+#wrap #headerNav #nav-select span.gang1 {
+  -webkit-transition: all .5s ease;
+  -webkit-transform-origin: left 50%;
+  /*-webkit-transform: rotate( 40deg );
+                    -webkit-transform-origin: left 50% ;*/
+}
+#wrap #headerNav #nav-select span.gang2 {
+  -webkit-transition: all .1s ease;
+  /*opacity: 0;*/
+}
+#wrap #headerNav #nav-select span.gang3 {
+  -webkit-transition: all .5s ease;
+  -webkit-transform-origin: left 50%;
+}
+#wrap #headerNav #nav-select.on span.gang1 {
+  -webkit-transform: rotate(39deg);
+}
+#wrap #headerNav #nav-select.on span.gang2 {
+  opacity: 0;
+}
+#wrap #headerNav #nav-select.on span.gang3 {
+  -webkit-transform: rotate(-39deg);
+}
+#wrap #headerNav .nav {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+}
+#wrap #headerNav .nav li {
+  width: 0px;
+  -webkit-box-flex: 1;
+}
+#wrap #headerNav .nav li a {
+  display: -webkit-box;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+#wrap #headerNav .nav li span {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  display: block;
+}
+#wrap #headerNav .nav li i {
+  display: block;
+  width: 2.167rem;
+  height: 2.167rem;
+  background-size: 100%;
+}
+#wrap #headerNav .nav li:nth-child(1) i {
+  background-image: url(../img/nav_icon_03.png);
+}
+#wrap #headerNav .nav li:nth-child(2) i {
+  background-image: url(../img/nav_icon_05.png);
+}
+#wrap #headerNav .nav li:nth-child(3) i {
+  background-image: url(../img/nav_icon_07.png);
+}
+#wrap #headerNav .userBox {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-flex: 1;
+  -webkit-box-align: end;
+}
+#wrap #headerNav .userBox div {
+  width: auto;
+  display: inline-block;
+}
+#wrap #headerNav .userBox span {
+  display: block;
+  text-align: left;
+  padding-right: 1rem;
+  color: #6B629A;
+  font-size: 1rem;
+}
+#wrap #headerNav .userBox span.userName {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#wrap #headerNav .break {
+  width: 4.583rem;
+  height: 4.583rem;
+  color: #fff;
+  font-family: icons;
+  font-size: 24px;
+  padding: 10px;
+}
+#wrap #headerNav .break:before {
+  content: "\e471";
+}
+#wrap #headerNav .break + h1,
+#wrap #headerNav #nav-select + h1 {
+  color: #fff;
+  font-weight: normal;
+}
+#wrap #headerNav b {
+  color: #fff;
+  -webkit-box-flex: 1;
+  text-align: right;
+  display: block;
+  margin-right: 1rem;
+  font-size: 20px;
+  font-weight: normal;
+}
+#wrap #content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#wrap #content #banner_bg {
+  width: 100%;
+  height: 100%;
+}
+#wrap #content #banner_bg li {
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+#wrap #content .left_nav {
+  width: 41%;
+  position: absolute;
+  left: 0;
+  top: 4.583rem;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  -webkit-transform: translateX(-100%);
+}
+#wrap #content .left_nav div {
+  margin-left: 18px;
+  margin-top: 1.667rem;
+}
+#wrap #content .left_nav div h1 {
+  font-size: 1.16rem;
+  font-weight: normal;
+  color: #6b629a;
+  padding-left: 1rem;
+  margin-bottom: 0.2rem;
+}
+#wrap #content .left_nav div li a {
+  color: #fff;
+  line-height: 2.167rem;
+  width: 100%;
+  display: block;
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+#wrap #content .left_nav div li a:active,
+#wrap #content .left_nav div li a:hover {
+  background: #6b629a;
+}
+/***
+ * menu样式
+ */
+.menu_page {
+  display: -webkit-box;
+  -webkit-box-align: center;
+}
+.menu_page .menu_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-filter: blur(20px);
+  /* Chrome, Opera */
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+.menu_page .menu_bg .slideBj {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  -webkit-transform: scale(1.1);
+}
+.menu_page #menu_list {
+  width: 100%;
+  height: auto;
+  margin-top: 4.583rem ;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  perspective: 1200px;
+}
+.menu_page #menu_list .swiper-pagination {
+  bottom: -20px;
+}
+.menu_page #menu_list .swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  background: #fff;
+}
+.menu_page #menu_list .swiper-pagination .swiper-pagination-bullet-active {
+  background: #fff;
+  -webkit-transform: scale(1.5);
+}
+.menu_page #menu_list .swiper-wrapper {
+  height: auto;
+}
+.menu_page #menu_list .swiper-slide {
+  width: 80%;
+  height: auto;
+  margin: 0 15px;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 0 5px #000;
+}
+.menu_page #menu_list .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.menu_page #menu_list .swiper-slide h1 {
+  font-size: 18px;
+  padding: 10px;
+  color: #666;
+}
+.menu_page #menu_list .swiper-slide p {
+  text-align: right;
+  padding: 10px;
+}
+.menu_page #menu_list .swiper-slide p .price {
+  font-size: 20px;
+  color: #615698;
+}
+.menu_page #menu_list .swiper-slide p .original {
+  color: #bbb;
+}
+/***
+ * 套餐详情样式
+ */
+.details_page .menu_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+}
+.details_page #slideBox {
+  display: -webkit-box;
+  width: 100%;
+  height: 100%;
+}
+.details_page .nav_tab {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.details_page .nav_tab nav {
+  width: 100%;
+  height: 2.75rem;
+  display: -webkit-box;
+}
+.details_page .nav_tab nav li {
+  background: rgba(140, 140, 140, 0.7);
+  -webkit-box-flex: 1;
+  line-height: 2.75rem;
+  text-align: center;
+}
+.details_page .nav_tab nav li a {
+  color: #fff;
+}
+.details_page .nav_tab nav li.on {
+  background: none;
+}
+.details_page .nav_tab section {
+  width: 100%;
+  padding: 0.833rem;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.details_page .nav_tab section article {
+  width: 100%;
+  height: 100%;
+  -webkit-box-flex: 1;
+  position: relative;
+}
+.details_page .nav_tab section article h1 {
+  color: #FFF;
+  font-weight: normal;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+.details_page .nav_tab section article h1:before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background: #fff;
+  margin-right: 1rem;
+}
+.details_page .nav_tab section article ul {
+  width: 100%;
+  padding-left: 2rem;
+  box-sizing: border-box;
+}
+.details_page .nav_tab section article ul li {
+  line-height: 2;
+  color: #fff;
+  display: -webkit-box;
+}
+.details_page .nav_tab section article ul li label {
+  display: block;
+  -webkit-box-flex: 1;
+  width: 1px;
+}
+.details_page .nav_tab section article ul li b {
+  display: block;
+  -webkit-box-flex: 1;
+  width: 1px;
+  font-weight: normal;
+}
+.details_page .nav_tab section article .buyBtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.details_page .payBox {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  padding: 1rem;
+  box-sizing: border-box;
+  -webkit-transform: translateX(100%);
+}
+.details_page .payBox form {
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  padding-bottom: 10rem;
+  box-sizing: border-box;
+}
+.details_page .payBox form .payBtn {
+  position: absolute;
+  bottom: 0;
+}
+.details_page .payBox form .total {
+  width: 100%;
+  text-align: right;
+  height: 3rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 1rem;
+  display: block;
+  color: #fff;
+  position: absolute;
+  bottom: 5rem;
+}
+.details_page .payBox form .total b {
+  font-weight: normal;
+}
+/***
+ * 支付成功
+ */
+.payOk_page .menu_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+}
+.payOk_page .payOk {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(86, 78, 142, 0.8);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.payOk_page .payOk .content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5rem;
+  box-sizing: border-box;
+  position: relative;
+}
+.payOk_page .payOk .ok_ico {
+  display: block;
+  width: 20%;
+  margin-bottom: 1rem;
+}
+.payOk_page .payOk h1 {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: normal;
+}
+.payOk_page .payOk p {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: normal;
+  line-height: 4rem;
+}
+.payOk_page .payOk span {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: normal;
+}
+.payOk_page .payOk .payOkBtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #615698;
+  background: #fff;
+}
+/***
+ * 位置导航
+ */
+#mapBox {
+  width: 100%;
+  height: 100%;
+}
+#mapBox #map {
+  width: 100%;
+  height: 100%;
+}
+#mapBox .btnGroup {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+}
+#mapBox .btnGroup button {
+  display: block;
+  width: 1px;
+  -webkit-box-flex: 1;
+}
+#mapBox .btnGroup button:first-child {
+  margin-right: 1rem;
+  background: #fff;
+  color: #615698;
+}
+#mapBox .btnGroup button:last-child {
+  background: #615698;
+  color: #fff;
+}
+/**
+ * 预定须知
+ */
+.details_page .menu_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+}
+.details_page .main {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.details_page .main .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.details_page .main h1 {
+  color: #FFF;
+  font-weight: normal;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+.details_page .main h1:before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background: #fff;
+  margin-right: 1rem;
+}
+.details_page .main .okBtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/***
+ * 在线预定信息
+ */
+.locDetails_page .payBox {
+  width: 100%;
+  height: 85%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  padding: 1rem;
+  box-sizing: border-box;
+  -webkit-transform: translateX(0);
+}
+.locDetails_page .payBox form {
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  padding-bottom: 10rem;
+  box-sizing: border-box;
+}
+.locDetails_page .payBox form .bookingBtn {
+  position: absolute;
+  bottom: 0;
+}
+.locDetails_page .payBox form .total {
+  width: 100%;
+  text-align: right;
+  height: 3rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 1rem;
+  display: block;
+  color: #fff;
+  position: absolute;
+  bottom: 5rem;
+}
+.locDetails_page .payBox form .total b {
+  font-weight: normal;
+}
+/**
+ * 个人中心
+ */
+#wrap #content.zoomContent {
+  overflow: auto;
+}
+#zoomMain {
+  width: 100%;
+  padding: 5.583rem 1rem 1rem 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#zoomMain .bookedModules {
+  width: 100%;
+  height: 10rem;
+  border-bottom: 1px solid #dfdfdf;
+  display: -webkit-box;
+}
+#zoomMain .bookedModules .left_content {
+  height: 100%;
+  width: 10rem;
+  position: relative;
+}
+#zoomMain .bookedModules .left_content h2 {
+  font-size: 1.167rem;
+  color: #868686;
+}
+#zoomMain .bookedModules .left_content p {
+  font-size: 1.167rem;
+  color: #868686;
+}
+#zoomMain .bookedModules .left_content a {
+  position: absolute;
+  bottom: 1.167rem;
+  left: 0;
+  font-size: 1rem;
+}
+#zoomMain .bookedModules .right_content {
+  height: 100%;
+  -webkit-box-flex: 1;
+}
+#zoomMain .bookedModules .right_content h1 {
+  font-size: 2rem;
+  color: #666;
+  display: block;
+  font-weight: normal;
+  line-height: 1.5;
+}
+#zoomMain .bookedModules .right_content .num {
+  font-size: 2rem;
+  color: #8f8f8f;
+  display: block;
+  line-height: 1.5;
+  padding-left: 2rem;
+}
+#zoomMain .bookedModules .right_content time {
+  font-size: 1rem;
+  color: #8f8f8f;
+  display: block;
+  line-height: 1.5;
+}
+#zoomMain .ticketsModules {
+  height: 7.500rem;
+  width: 100%;
+  margin-top: 1rem;
+  display: -webkit-box;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dfdfdf;
+}
+#zoomMain .ticketsModules .tickets {
+  -webkit-box-flex: 1;
+  border-left: 1px solid #dfdfdf;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: justify;
+  width: 1px;
+}
+#zoomMain .ticketsModules .tickets:first-child {
+  border: 0;
+}
+#zoomMain .ticketsModules .tickets:last-child h1 {
+  margin-left: 1rem;
+}
+#zoomMain .ticketsModules .tickets h1 {
+  font-size: 1.167rem;
+  color: #b3b3b7;
+  display: block;
+  font-weight: normal;
+  line-height: 1.5;
+}
+#zoomMain .ticketsModules .tickets span,
+#zoomMain .ticketsModules .tickets p {
+  font-size: 1.167rem;
+  display: block;
+  text-align: center;
+  color: #b3b3b7;
+}
+#zoomMain .ticketsModules .tickets span b,
+#zoomMain .ticketsModules .tickets p b {
+  font-size: 2rem;
+  font-weight: normal;
+}
+#zoomMain .ticketsModules .tickets a {
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+#zoomMain .recommendedModules {
+  width: 100%;
+  margin-top: 1rem;
+}
+#zoomMain .recommendedModules h1 {
+  font-size: 1.167rem;
+  color: #868686;
+  line-height: 3rem;
+}
+#zoomMain .recommendedModules .foodList .item {
+  width: 49%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 0.5rem;
+}
+#zoomMain .recommendedModules .foodList .item:nth-child(odd) {
+  margin-right: 1%;
+}
+#zoomMain .recommendedModules .foodList .item .marginHeight {
+  margin-top: 112%;
+}
+#zoomMain .recommendedModules .foodList .item a {
+  overflow: hidden;
+  display: block;
+}
+#zoomMain .recommendedModules .foodList .item .content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+#zoomMain .recommendedModules .foodList .item .content h1 {
+  padding-top: 0.5rem;
+}
+#zoomMain .recommendedModules .foodList .item .content h1 span {
+  display: block;
+  line-height: 1.5;
+  font-weight: normal;
+  color: #383838;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+#zoomMain .recommendedModules .foodList .item .content p {
+  text-align: right;
+  color: #b4b1af;
+  line-height: 1.5;
+  padding-bottom: 0.4rem;
+  font-weight: normal;
+  padding-right: 0.5rem;
+}
+#zoomMain .recommendedModules .foodList .item .content p b {
+  color: #d84d55;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-left: 1rem;
+}
+/**
+ * 预订列表
+ */
+#listMain {
+  width: 100%;
+  padding-top: 5.583rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#listMain .item {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+#listMain .item > a {
+  display: block;
+  text-align: right;
+  color: #aaa;
+}
+#listMain .item > div {
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}
+#listMain .item > div time {
+  display: block;
+  color: #888;
+  width: 6rem;
+}
+#listMain .item > div time span {
+  display: block;
+}
+#listMain .item > div time span:last-child {
+  font-size: 1.2rem;
+}
+#listMain .item > div aside {
+  -webkit-box-flex: 1;
+}
+#listMain .item > div aside h1 {
+  font-size: 1.134rem;
+  color: #666;
+  font-weight: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#listMain .item > div aside .price {
+  font-size: 2rem;
+  color: #999;
+}
+#listMain .item > div .btn {
+  display: block;
+  width: 4rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  background-image: -webkit-linear-gradient(top, #9fd188, #75ad59);
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  box-shadow: 1px 0 0 #75ad59, 0 1px 0 #75ad59, -1px 0 0 #75ad59, 0 -1px 0 #75ad59;
+  overflow: hidden;
+}
+#listMain .item > div .btn.dislble {
+  background-image: -webkit-linear-gradient(top, #ebebeb, #ebebeb);
+  color: #939393;
+  border: 1px solid #fff;
+  box-shadow: 1px 0 0 #b5b5b5, 0 1px 0 #b5b5b5, -1px 0 0 #b5b5b5, 0 -1px 0 #b5b5b5;
+}
+#listMain .item > div .num {
+  color: #888;
+  width: 5rem;
+}
+#listMain .item > div .num b {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1;
+}
+/**
+ * 预订详情
+ */
+#detailsMain {
+  width: 100%;
+  height: 100%;
+  padding-top: 4.583rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+#detailsMain header {
+  height: 2.083rem;
+  width: 100%;
+  background: #d5d5d5;
+  line-height: 2.083rem;
+}
+#detailsMain header h1 {
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center;
+}
+#detailsMain header h1:after {
+  content: "\e4609";
+}
+#detailsMain .infor {
+  width: 100%;
+  -webkit-box-flex: 1;
+  overflow: auto;
+  display: -webkit-box;
+  height: 100%;
+}
+#detailsMain .infor .inforLeft {
+  position: absolute;
+  top: 2.083rem;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 5rem;
+  padding-top: 6.583rem;
+  box-sizing: border-box;
+  background: #f6f6f6;
+}
+#detailsMain .infor .inforLeft label {
+  display: block;
+  height: 3.750rem;
+  line-height: 3.750rem;
+  color: #888888;
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+#detailsMain .infor .inforLeft label:first-child,
+#detailsMain .infor .inforLeft label:last-child {
+  border-top: 1px solid #e0e0e0;
+}
+#detailsMain .infor .inforRight {
+  -webkit-box-flex: 1;
+  padding-left: 5rem;
+  box-sizing: border-box;
+  padding-top: 2rem;
+}
+#detailsMain .infor .inforRight div {
+  display: block;
+  height: 3.750rem;
+  line-height: 3.750rem;
+  padding-left: 1rem;
+  color: #666565;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
+#detailsMain .infor .inforRight div:first-child,
+#detailsMain .infor .inforRight div:last-child {
+  border-top: 1px solid #e0e0e0;
+}
+#detailsMain .infor .inforRight div a {
+  font-size: 1rem;
+  float: right;
+  line-height: 5rem;
+  padding-right: 1rem;
+  color: #666565;
+}
+/**
+ * 申请退款
+ */
+#refundMain {
+  height: 100%;
+  padding-top: 5.583rem;
+  margin: 0 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+#refundMain h1 {
+  font-size: 1.134rem;
+  font-weight: normal;
+}
+#refundMain textarea {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px #959595 solid;
+  resize: none;
+  margin: 1rem 0;
+}
+#refundMain p {
+  color: #959595;
+}
+#refundMain #refundBtn {
+  position: absolute;
+  bottom: 1rem;
+}

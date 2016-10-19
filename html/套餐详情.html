@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8" />
+		<title>长春凯越酒店商城</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../js/swiper.min.css" />
+		<script type="text/javascript" src="../js/zepto.min.js" ></script>
+		<script type="text/javascript" src="../js/swiper.min.js" ></script>
+	</head>
+	<body>
+		
+		<div id="wrap">
+			<nav id="headerNav">
+				<a href="./menu.html" class="break"></a>
+				<h1>超值午间双人套餐</h1>
+				<b class="">￥168</b>
+			</nav>
+			<div id="content" class="details_page">
+				<div class="menu_bg" style="background-image: url(../img/menu_img.jpg);"></div>
+				
+				<div id="slideBox">
+				<div class="nav_tab">
+					<nav>
+						<li class="on"><a href="javascript:;">套餐详情</a></li>
+						<li><a href="javascript:;">购买规则</a></li>
+					</nav>
+				    <section>
+				    	<article>
+				    		<h1>午间双人套餐</h1>
+				    		<ul>
+				    			<li><label>牛排</label><b>￥118/份</b></li>
+				    			<li><label>孜然肥牛煲</label><b>￥118/份</b></li>
+				    			<li><label>日式拌面</label><b>￥118/份</b></li>
+				    			<li><label>蔬菜沙拉</label><b>￥118/份</b></li>
+				    			<li><label>卡布奇诺咖啡</label><b>￥118/份</b></li>
+				    		</ul>
+				    		<button class="buyBtn">立即购买</button>
+				    	</article>
+				    	<article style="display: none;">
+				    		<h1>购买规则</h1>
+				    		<ul>
+				    			<li>第一条:一个号码只能购买一次</li>
+				    			<li>第二条：第二份半价</li>
+				    			<li>第三条:购买五分以上送精美小礼品</li>
+				    		</ul>
+				    	</article>
+				    </section>
+				</div>
+				<div class="payBox">
+					
+					<form class="formGroup" action="./支付成功.html">
+						<input name="userName" type="text" placeholder="输入您的姓名" />
+						<input name="userTel" type="tel" placeholder="输入您的手机号" />
+						<p>
+							<label>购买数量</label>
+							<span class="minusBtn">-</span> <input type="text" value="1" class="output" /> <span class="plusBtn">+</span>
+						</p>
+						
+						<span class="total" price='168'>总价 ￥<b>336</b></span>
+						<button class="payBtn" >支付</button>
+					</form>
+					
+				</div>
+				
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	
+
+	<script>
+		$( ".nav_tab nav li" ).tap(function(){
+			var index = $(this).index();
+			$(this).addClass("on").siblings().removeClass("on")
+			$( ".nav_tab section article" ).eq(index).show().siblings().hide();
+		})
+		
+		$( ".minusBtn" ).tap(function(){
+			var num = $( ".output" ).val();
+			num--;
+			num = num > 0 ? num : 1;
+			
+			$( ".output" ).val(num)
+			var price= $( ".total").attr( "price" );
+			$( ".total b" ).text( price*num )
+		})
+		
+		$( ".plusBtn" ).tap(function(){
+			var num = $( ".output" ).val();
+			num++;
+			$( ".output" ).val(num)
+			var price= $( ".total").attr( "price" );
+			$( ".total b" ).text( price*num )
+		})
+		
+		$( ".buyBtn" ).tap(function(){
+			$( ".nav_tab" ).animate({
+				translateX : "-100%"
+			},200)
+			$( ".payBox" ).animate({
+				translateX : "0"
+			},200)
+		})
+	</script>
+</html>

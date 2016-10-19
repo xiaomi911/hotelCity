@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8" />
+		<title>长春凯越酒店商城</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../js/swiper.min.css" />
+		<script type="text/javascript" src="../js/zepto.min.js" ></script>
+		<script type="text/javascript" src="../js/swiper.min.js" ></script>
+	</head>
+	<body>
+		
+		<div id="wrap">
+			<nav id="headerNav">
+				<a href="#" class="break"></a>
+				<h1>在线定位</h1>
+			</nav>
+			<div id="content" class="details_page locDetails_page">
+				<div class="menu_bg" style="background-image: url(../img/menu_img.jpg);"></div>
+				
+				<div class="payBox">
+					
+					<form class="formGroup">
+						<select>
+							<option>品悦中餐厅</option>
+							<option>品悦中餐厅</option>
+							<option>品悦中餐厅</option>
+							<option>品悦中餐厅</option>
+						</select>
+						<input name="userName" type="text" placeholder="输入您的姓名" />
+						<input name="userTel" type="tel" placeholder="输入您的手机号" />
+						<input name="userTel" type="datetime-local"  />
+						<p>
+							<label>就餐人数</label>
+							<span class="minusBtn">-</span> <input type="text" value="1" class="output" /> <span class="plusBtn">+</span>
+						</p>
+						<textarea placeholder="备注：例如，是否靠窗?"></textarea>
+						<button class="bookingBtn">开始预订</button>
+					</form>
+					
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	
+
+	<script>
+		$( ".minusBtn" ).tap(function(){
+			var num = $( ".output" ).val();
+			num--;
+			num = num > 0 ? num : 1;
+			
+			$( ".output" ).val(num)
+		})
+		
+		$( ".plusBtn" ).tap(function(){
+			var num = $( ".output" ).val();
+			num++;
+			$( ".output" ).val(num)
+		})
+		
+	</script>
+</html>

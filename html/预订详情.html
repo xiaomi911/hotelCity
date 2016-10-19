@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8" />
+		<title>长春凯越酒店商城</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../js/swiper.min.css" />
+		<script type="text/javascript" src="../js/zepto.min.js" ></script>
+		<script type="text/javascript" src="../js/swiper.min.js" ></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<nav id="headerNav">
+				
+				<div id="nav-select">
+					<span class="gang1"></span>
+					<span class="gang2"></span>
+					<span class="gang3"></span>
+				</div>
+				<h1>个人中心</h1>
+			</nav>
+			<div id="content" class="zoomContent">
+				
+				<div id="detailsMain">
+					<header>
+						<h1>2015年6月25日</h1>
+					</header>
+					<div class="infor">
+						<div class="inforLeft">
+							<label>先生</label>
+							<label>电话</label>
+							<label>信息</label>
+							<label>备注</label>
+							<label>状态</label>
+						</div>
+						<div class="inforRight">
+							<div>王</div>
+							<div>13899998888</div>
+							<div>2人</div>
+							<div>靠窗</div>
+							<div>未使用<a href="./申请退款.html">申请退款>></a></div>
+						</div>
+						
+					</div>
+				</div>
+				<nav class="left_nav">
+					<div>
+						<h1>酒店特惠</h1>
+						<ul>
+							<li><a href="./menu.html">酥园</a></li>
+							<li><a href="./menu.html">品悦中餐厅</a></li>
+							<li><a href="./menu.html">大堂酒廊</a></li>
+							<li><a href="./menu.html">咖啡厅</a></li>
+							<li><a href="./menu.html">酒吧</a></li>
+						</ul>
+					</div>
+					
+					<div>
+						<h1>更多服务</h1>
+						<ul>
+							<li><a href="./地图.html">在线定位</a></li>
+							<li><a href="./地图.html">位置导航</a></li>
+						</ul>
+					</div>
+					
+					<div>
+						<h1>VIP中心</h1>
+						<ul>
+							<li><a href="./个人中心.html">个人中心</a></li>
+							<li><a href="./个人中心.html">帮助</a></li>
+						</ul>
+					</div>
+				</nav>
+				
+			</div>
+		</div>
+		<script>
+			$( "#nav-select" ).tap(function(){
+				$(this).toggleClass("on");
+				
+				if( $(this).hasClass("on") ){
+					$(".left_nav").animate({
+						translateX : "0"
+					},500,"ease-out")
+				}else{
+					$(".left_nav").animate({
+						translateX : "-100%"
+					},500,"ease-out	")
+				}
+			})
+		</script>
+	</body>
+</html>

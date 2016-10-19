@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8" />
+		<title>长春凯越酒店商城</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../js/swiper.min.css" />
+		<script type="text/javascript" src="../js/zepto.min.js" ></script>
+		<script type="text/javascript" src="../js/swiper.min.js" ></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CcgBkamMPZlbSSI8YBvPwmrb"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<nav id="headerNav">
+				<a href="#" class="break"></a>
+				<h1>位置导航</h1>
+			</nav>
+			<div id="mapBox">
+				<div id="map"></div>
+				<div class="btnGroup">
+					<button class="cellBtn ">拨打电话</button>
+					<button class="navigationBtn">导航</button>
+					
+				</div>
+			</div>
+		</div>
+		<script>
+			
+			// 百度地图API功能
+			var map = new BMap.Map("map");
+			var point = new BMap.Point(116.331398,39.897445);
+			map.centerAndZoom(point,12);
+			// 创建地址解析器实例
+			var myGeo = new BMap.Geocoder();
+			// 将地址解析结果显示在地图上,并调整地图视野
+			myGeo.getPoint("北京市朝阳区东四环CBD商业中心", function(point){
+			    if (point) {
+			        map.centerAndZoom(point, 16);
+			        map.addOverlay(new BMap.Marker(point));
+			        //alert('ss');
+			        /*document.getElementById('pay_btn').onclick=function(){
+			            zb(point);
+			        }*/
+			    }
+			}, "合肥市");
+			
+			function zb(rs)
+			{
+			    var map = new BMap.Map("map");
+			    var point = new BMap.Point(116.331398,39.897445);
+			    map.centerAndZoom(point,12);
+			
+			    var geolocation = new BMap.Geolocation();
+			    geolocation.getCurrentPosition(function(r){
+			        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+			            var mk = new BMap.Marker(r.point);
+			            map.addOverlay(mk);
+			            map.panTo(r.point);
+			
+			            var p1 = r.point;
+			
+			            var p2 = rs;
+			
+			            var driving = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true}});
+			            driving.search(p1, p2);
+			            // alert('您的位置：'+r.point.lng+','+r.point.lat);
+			        }
+			        else {
+			            alert('failed'+this.getStatus());
+			        }
+			    },{enableHighAccuracy: true})
+			}
+		</script>
+	</body>
+</html>
